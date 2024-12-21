@@ -5,30 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Board Store</title>
     <style>
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
+           
+           
         }
 
         header {
+            background-image: url('../First\ Project/Profile.png');
+            background-size:cover;
+            height: 250px;
             background-color: #333;
             color: white;
-            padding: 10px 20px;
+            padding: 20px 30px;
             text-align: center;
         }
 
         nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
+            display:flow-root;
+            justify-content:first baseline;
+            background-color: #040404;
             padding: 10px 0;
         }
 
         nav a {
-            color: white;
-            text-decoration: none;
+            color: rgb(252, 250, 250);
+            text-decoration:solid;
             margin: 0 15px;
             font-weight: bold;
         }
@@ -38,8 +44,8 @@
         }
 
         .container {
-            padding: 20px;
-            max-width: 1200px;
+            padding: 15px;
+            max-width: 1500px;
             margin: auto;
         }
 
@@ -48,7 +54,7 @@
             border-radius: 5px;
             overflow: hidden;
             margin: 15px;
-            background-color: white;
+            background-color: rgb(248, 244, 244);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
@@ -143,34 +149,34 @@
     </script>
 </head>
 <body>
-<img width="200px" src="Profile.png" alt="">
 <header>
-    <h1>Sign Board Store</h1>
-    <p>Your one-stop shop for LED Acrylic Signs, Neon Signs, and Digital Video Walls!</p>
+    <h1></h1>
+    <p></p>
 </header>
 
 <nav>
     <a href="#led-acrylic">LED Acrylic Signs</a>
     <a href="#neon">Neon Signs</a>
     <a href="#video-wall">Digital Video Walls</a>
+    
 </nav>
 
 <div class="container">
     <h2 id="led-acrylic">LED Acrylic Signs</h2>
     <div class="products">
         <div class="product">
-            <img src="Acrylic_Muthumariamman.png" alt="LED Acrylic Sign">
+            <img src="Acrylic_Muthumariamman.png" alt="LED Acrylic Sign" height="200" width="800px">
             <div class="product-info">
                 <h3 class="product-title">Modern LED Acrylic Sign</h3>
-                <p class="product-price">$150</p>
+                <p class="product-price">Rs.850 /sq.ft</p>
                 <button>Add to Cart</button>
             </div>
         </div>
         <div class="product">
-            <img src="Acrylic_GeeVee.png" alt="LED Acrylic Sign">
+            <img src="Acrylic_GeeVee.png" alt="LED Acrylic Sign" height="200" width="800px">
             <div class="product-info">
                 <h3 class="product-title">Custom LED Acrylic Sign</h3>
-                <p class="product-price">$200</p>
+                <p class="product-price">Rs.850 /sq.ft</p>
                 <button>Add to Cart</button>
             </div>
         </div>
@@ -179,18 +185,26 @@
     <h2 id="neon">Neon Signs</h2>
     <div class="products">
         <div class="product">
-            <img src="Neon_Siva_Siva.png" alt="Neon Sign">
+            <img src="Neon_Siva_Siva.png" alt="Neon Sign" height="250" width="300px">
             <div class="product-info">
                 <h3 class="product-title">Classic Neon Sign</h3>
-                <p class="product-price">$120</p>
+                <p class="product-price">Rs.750/sq.ft</p>
                 <button>Add to Cart</button>
             </div>
         </div>
         <div class="product">
-            <img src="Neon_Mulit_Wing.jpg" alt="Neon Sign">
+            <img src="Neon_Mulit_Wing.jpg" alt="Neon Sign" height="250" width="300px">
             <div class="product-info">
                 <h3 class="product-title">Custom Neon Sign</h3>
-                <p class="product-price">$180</p>
+                <p class="product-price">Rs.750/sq.ft</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="Neon_Siva_Siva.png" alt="Neon Sign" height="250" width="300px">
+            <div class="product-info">
+                <h3 class="product-title">Classic Neon Sign</h3>
+                <p class="product-price">Rs.750/sq.ft</p>
                 <button>Add to Cart</button>
             </div>
         </div>
@@ -199,18 +213,18 @@
     <h2 id="video-wall">Digital Video Walls</h2>
     <div class="products">
         <div class="product">
-            <img src="LED_Digital_Multi_1x4.png" alt="Digital Video Wall">
+            <img src="LED_Digital_Multi_1x4.png" alt="Digital Video Wall" height="200" width="300px">
             <div class="product-info">
                 <h3 class="product-title">4K LED Video Wall</h3>
-                <p class="product-price">$2500</p>
+                <p class="product-price">Rs.3200 /sq.ft</p>
                 <button>Add to Cart</button>
             </div>
         </div>
         <div class="product">
-            <img src="LED_Digital_Wall.png" alt="Digital Video Wall">
+            <img src="LED_Digital_Wall.png" alt="Digital Video Wall" height="300" width="300px">
             <div class="product-info">
                 <h3 class="product-title">Custom Digital Video Wall</h3>
-                <p class="product-price">$3000</p>
+                <p class="product-price">Rs.4850 /sq.ft</p>
                 <button>Add to Cart</button>
             </div>
         </div>
