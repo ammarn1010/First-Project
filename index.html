@@ -3,11 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My first website</title>
+    <title>Sign Board Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 15px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .product-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .product-price {
+            color: #27ae60;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .product button {
+            padding: 10px 15px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .product button:hover {
+            background-color: #219150;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Sample images for each type of sign */
+        #led-acrylic .product img {
+            content: url('https://via.placeholder.com/300?text=LED+Acrylic+Sign');
+        }
+
+        #neon .product img {
+            content: url('https://via.placeholder.com/300?text=Neon+Sign');
+        }
+
+        #video-wall .product img {
+            content: url('https://via.placeholder.com/300?text=Digital+Video+Wall');
+        }
+    </style>
+    <script>
+        // Cart functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = [];
+
+            function addToCart(product) {
+                cart.push(product);
+                alert(`${product.title} added to cart!`);
+                console.log(cart);
+            }
+
+            const buttons = document.querySelectorAll('.product button');
+
+            buttons.forEach((button, index) => {
+                button.addEventListener('click', () => {
+                    const productElement = button.closest('.product');
+                    const title = productElement.querySelector('.product-title').textContent;
+                    const price = productElement.querySelector('.product-price').textContent;
+
+                    const product = { title, price };
+                    addToCart(product);
+                });
+            });
+        });
+    </script>
 </head>
 <body>
-    <h1>William</h1>
-    <img width="200px" src="profile.jpeg" alt="">
-<p>My Profile text</p>
+<img width="200px" src="Profile.png" alt="">
+<header>
+    <h1>Sign Board Store</h1>
+    <p>Your one-stop shop for LED Acrylic Signs, Neon Signs, and Digital Video Walls!</p>
+</header>
+
+<nav>
+    <a href="#led-acrylic">LED Acrylic Signs</a>
+    <a href="#neon">Neon Signs</a>
+    <a href="#video-wall">Digital Video Walls</a>
+</nav>
+
+<div class="container">
+    <h2 id="led-acrylic">LED Acrylic Signs</h2>
+    <div class="products">
+        <div class="product">
+            <img src="Acrylic_Muthumariamman.png" alt="LED Acrylic Sign">
+            <div class="product-info">
+                <h3 class="product-title">Modern LED Acrylic Sign</h3>
+                <p class="product-price">$150</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="Acrylic_GeeVee.png" alt="LED Acrylic Sign">
+            <div class="product-info">
+                <h3 class="product-title">Custom LED Acrylic Sign</h3>
+                <p class="product-price">$200</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <h2 id="neon">Neon Signs</h2>
+    <div class="products">
+        <div class="product">
+            <img src="Neon_Siva_Siva.png" alt="Neon Sign">
+            <div class="product-info">
+                <h3 class="product-title">Classic Neon Sign</h3>
+                <p class="product-price">$120</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="Neon_Mulit_Wing.jpg" alt="Neon Sign">
+            <div class="product-info">
+                <h3 class="product-title">Custom Neon Sign</h3>
+                <p class="product-price">$180</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <h2 id="video-wall">Digital Video Walls</h2>
+    <div class="products">
+        <div class="product">
+            <img src="LED_Digital_Multi_1x4.png" alt="Digital Video Wall">
+            <div class="product-info">
+                <h3 class="product-title">4K LED Video Wall</h3>
+                <p class="product-price">$2500</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="LED_Digital_Wall.png" alt="Digital Video Wall">
+            <div class="product-info">
+                <h3 class="product-title">Custom Digital Video Wall</h3>
+                <p class="product-price">$3000</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Sign Board Store. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
